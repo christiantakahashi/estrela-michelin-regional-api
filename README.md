@@ -1,11 +1,24 @@
-# Estrela Michelin Regional — UC-C04 Buscar restaurantes por contexto
+# README
 
-Trabalho de Análise e Projeto de Software (UEM).
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-| Pasta | Conteúdo | Responsável |
-|---|---|---|
-| `api/` | API Ruby on Rails + SQLite | Yukio |
-| `web/` | Front React + TypeScript | Gabriel e João Pedro |
-| `docs/` | Documentação, testes e apresentação | Anderson |
+Things you may want to cover:
 
-Tech lead: Leonardo.
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
