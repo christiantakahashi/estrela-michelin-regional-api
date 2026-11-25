@@ -1,0 +1,21 @@
+# Dependências
+/.bundle
+
+# Logs e temporários
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Banco SQLite local e arquivos
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+# Chave secreta: NUNCA commitar
+/config/master.key
