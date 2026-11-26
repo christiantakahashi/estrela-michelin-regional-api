@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_25_180053) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_26_173544) do
   create_table "cities", force: :cascade do |t|
     t.string "name", null: false
     t.string "state", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name", "state"], name: "index_cities_on_name_and_state", unique: true
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "category", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category", "name"], name: "index_tags_on_category_and_name", unique: true
   end
 end
