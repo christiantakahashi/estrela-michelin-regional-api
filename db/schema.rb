@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_27_132124) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_27_185709) do
   create_table "cities", force: :cascade do |t|
     t.string "name", null: false
     t.string "state", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name", "state"], name: "index_cities_on_name_and_state", unique: true
+  end
+
+  create_table "restaurant_tags", force: :cascade do |t|
+    t.integer "restaurant_id", null: false
+    t.integer "tag_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id", "tag_id"], name: "index_restaurant_tags_on_restaurant_id_and_tag_id", unique: true
+    t.index ["restaurant_id"], name: "index_restaurant_tags_on_restaurant_id"
+    t.index ["tag_id"], name: "index_restaurant_tags_on_tag_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -42,5 +52,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_27_132124) do
     t.index ["category", "name"], name: "index_tags_on_category_and_name", unique: true
   end
 
+  add_foreign_key "restaurant_tags", "restaurants"
+  add_foreign_key "restaurant_tags", "tags"
   add_foreign_key "restaurants", "cities"
 end

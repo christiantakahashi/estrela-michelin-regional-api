@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+cantina_italiana:
+  restaurant: cantina
+  tag: italiana
+
+cantina_romantico:
+  restaurant: cantina
+  tag: romantico
+
+cantina_aconchegante:
+  restaurant: cantina
+  tag: aconchegante

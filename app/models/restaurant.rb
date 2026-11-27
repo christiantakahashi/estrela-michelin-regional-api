@@ -7,6 +7,8 @@ class Restaurant < ApplicationRecord
   enum :status, { pending: 0, approved: 1, rejected: 2 }, validates: true
 
   belongs_to :city
+  has_many :restaurant_tags, dependent: :destroy
+  has_many :tags, through: :restaurant_tags
 
   validates :name, presence: true
   validates :price_range, inclusion: { in: PRICE_RANGES }, allow_nil: true
