@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+cantina:
+  name: Cantina da Nonna
+  city: maringa
+  neighborhood: zona 7
+  address: Av. Brasil, 1200
+  price_range: 2
+  status: approved
+  approved_at: <%= 12.days.ago %>
+  average_rating: 4.6
+
+osteira:
+  name: Osteria Fiore
+  city: curitiba
+  neighborhood: Batel
+  address: Rua Bispo Dom José, 300
+  price_range: 3
+  status: approved
+  approved_at: <%= 200.days.ago %>
+  average_rating: 4.7
